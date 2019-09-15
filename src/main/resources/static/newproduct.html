@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodanie produktu</title>
+</head>
+<body>
+<h1>Dodanie nowego produktu</h1>
+<form action="/nowy" method="post">
+    <input type="text" placeholder="nazwa produktu" name="name">
+    <input type="number" placeholder="cena" name="price">
+    <select name="category">
+        <option selected>wybierz kategorię produktu:</option>
+        <option value="FOOD">spożywcze</option>
+        <option value="HOUSEHOLD">domowe</option>
+        <option value="OTHER">pozostałe</option>
+    </select>
+    <input type="submit" name="Dodaj" value="Wyślij">
+</form>
+</body>
+</html>
