@@ -23,14 +23,11 @@ public class ProductsRepository {
     public List<Product> getByCategory(Category category) {
         List<Product> selectedProducts = new ArrayList<>();
 
-        if (category == null)
-            selectedProducts = products;
-        else
-            for (Product product : products) {
-                if(product.getCategory().equals(category)) {
-                    selectedProducts.add(product);
-                }
-            }
+        for (Product product : products) {
+           if(product.getCategory().equals(category)) {
+               selectedProducts.add(product);
+           }
+        }
         return selectedProducts;
     }
 }
