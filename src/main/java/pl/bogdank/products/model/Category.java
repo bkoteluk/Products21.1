@@ -3,8 +3,7 @@ package pl.bogdank.products.model;
 public enum Category {
     FOOD ("Artykuły spożywcze", "spozywcze"),
     HOUSEHOLD("Artykuły gospodarstwa domowego", "domowe"),
-    OTHER("Pozostałe artykuły", "inne"),
-    ALL("Wszystkie", "wszystkie");
+    OTHER("Pozostałe artykuły", "inne");
 
     private String displayName;
     private String nickName;

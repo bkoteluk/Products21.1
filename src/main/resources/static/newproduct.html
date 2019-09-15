@@ -8,7 +8,7 @@
 <h1>Dodanie nowego produktu</h1>
 <form action="/nowy" method="post">
     <input type="text" placeholder="nazwa produktu" name="name">
-    <input type="number" placeholder="cena" name="price">
+    <input type="number" step = "0.01" min = "0" placeholder="0,00" name="price">
     <select name="category">
         <option selected>wybierz kategorię produktu:</option>
         <option value="FOOD">spożywcze</option>
