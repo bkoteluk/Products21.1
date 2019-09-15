@@ -5,20 +5,18 @@ import java.util.List;
 
 public class ProductsUtils {
 
-    public static double sumPrice(List<Product> products, String category) {
+    public static double sumPrice(List<Product> products) {
         double sum = 0;
         for (Product product : products) {
-            if(product.getCategory().getNickName().equals(category) || (category.equals("wszystkie")))
-                sum += product.getPrice();
+            sum += product.getPrice();
         }
         return sum;
     }
 
-    public static String productsInfo(List<Product> products, String category) {
+    public static String productsInfo(List<Product> products) {
         String info = "";
         for (Product product : products) {
-            if(product.getCategory().getNickName().equals(category) || (category.equals("wszystkie")))
-                info += product.toString() + "<br/>";
+           info += product.toString() + "<br/>";
         }
         return info;
     }

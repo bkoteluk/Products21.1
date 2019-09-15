@@ -21,14 +21,14 @@ public class ProductsController {
 
     @ResponseBody
     @GetMapping("/lista")
-    public String productsListAll(@RequestParam(name = "kategoria", required = false, defaultValue = "wszystkie") String category) {
+    public String productsList(@RequestParam(name = "kategoria", required = false) Category category) {
 
-        List<Product> products = productsRepository.getAll();
+        List<Product> products = productsRepository.getByCategory(category);
         String result = "";
 
-        result += productsInfo(products, category);
+        result += productsInfo(products);
         result += "<hr>";
-        result += "Suma cen produktów: " + sumPrice(products, category);
+        result += "Suma cen produktów: " + sumPrice(products);
 
         return result + goToMainMenu();
     }
